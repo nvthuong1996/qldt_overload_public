@@ -79,10 +79,6 @@ module.exports = async function (req, res, next) {
         "//doituong.value = dsDaChon.substring(19, x.length - 6);"
       );
       body = body.replace(
-        `<span id="ctl00_menu_Label8" class="Label">HƯỚNG DẪN ĐĂNG KÝ</span>`,
-        '<span id="ctl00_menu_Label8" class="Label" style="color:  red;word-wrap: break-word;">Ad vừa thay đổi thuật toán kiểm tra trùng TKB so với các kì trước. Ad không chịu trách nhiệm khi thuật toán chạy sai nhưng ad sẽ fix khi có người report lỗi</span>'
-      );
-      body = body.replace(
         `<a href='HDDKMH.htm'>`,
         `<a href="https://www.facebook.com/ptitchatbot" target="_blank">`
       );
