@@ -1,0 +1,105 @@
+﻿.AspNet-Menu-Horizontal
+{
+	position:			relative;
+	height:				39px;
+	z-index:			1000;
+}
+ul.AspNet-Menu
+{
+	height:				40px;
+}
+ul.AspNet-Menu li
+{
+	margin-bottom:		0;
+}
+ul.AspNet-Menu a
+{
+	font-weight:			bold;
+}
+
+/* tier 1 nav */
+ul.AspNet-Menu li.AspNet-Menu-WithChildren > a,
+ul.AspNet-Menu li.AspNet-Menu-Leaf > a
+{
+	width:				130px;
+	height:				26px;
+	padding-top:		11px;
+	text-align:			center;
+	border:				1px solid #a6a6a6;
+	font-size:			12px;
+	color:				#000000;
+}
+ul.AspNet-Menu li.AspNet-Menu-WithChildren + li > a,
+ul.AspNet-Menu li.AspNet-Menu-Leaf + li > a
+{
+	border-left:		none;
+}
+
+ul.AspNet-Menu > li.AspNet-Menu-Selected > a,
+ul.AspNet-Menu li.AspNet-Menu-ChildSelected > a
+{
+	background:			transparent url('../images/tier1-nav-bkgd-hover.jpg') 0 0 no-repeat;
+}
+
+ul.AspNet-Menu li.AspNet-Menu-WithChildren > a:hover,
+ul.AspNet-Menu li.AspNet-Menu-Leaf > a:hover,
+ul.AspNet-Menu li.childHover > a
+{
+	background-image:	none;
+	background-color:	#ebffc1;
+	color:				#000000;
+}
+
+
+/* tier 2 nav */
+ul.AspNet-Menu li ul
+{
+	width:				130px;
+}
+
+ul.AspNet-Menu li.AspNet-Menu-WithChildren + li ul,
+ul.AspNet-Menu li.AspNet-Menu-Leaf + li ul
+{
+	left:				-1px;
+}
+
+ul.AspNet-Menu li ul li
+{
+	float:				none;
+}
+ul.AspNet-Menu li.childHover ul
+{
+	visibility:			visible;
+}
+ul.AspNet-Menu li.AspNet-Menu-WithChildren li.AspNet-Menu-Leaf
+{
+
+}
+ul.AspNet-Menu li.AspNet-Menu-WithChildren li.AspNet-Menu-Leaf a
+{
+	/* Override inherited styles from tier 1 .AspNet-Menu-Leaf */
+	background-color:	#FFFFFF;
+	text-align:			left;
+	border:				1px solid #afafaf;
+	border-top:			none;
+	width:				130px;
+	height:				30px;
+
+
+	padding:			15px 0 0 20px;
+	font-weight:		normal;
+	color:				#000;
+	font-size:			11px;
+	text-decoration:	none;
+}
+
+ul.AspNet-Menu li.AspNet-Menu-WithChildren li.AspNet-Menu-Leaf + li.AspNet-Menu-Leaf a
+{
+	border-left:		1px solid #afafaf;
+}
+
+ul.AspNet-Menu li.AspNet-Menu-WithChildren li.AspNet-Menu-Leaf a.AspNet-Menu-Selected,
+ul.AspNet-Menu li.AspNet-Menu-WithChildren li.AspNet-Menu-Leaf a:hover
+{
+	background-color:	#ebffc1;
+}

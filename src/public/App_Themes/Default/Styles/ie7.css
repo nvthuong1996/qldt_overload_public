@@ -1,0 +1,72 @@
+.contentWrapper {
+	POSITION: static
+}
+.twoColWrapper_40_60 {
+	POSITION: static
+}
+.twoColWrapper_50_50 {
+	POSITION: static
+}
+.twoColWrapper_70_30 {
+	POSITION: static
+}
+.twoColWrapper_30_70 {
+	POSITION: static
+}
+.twoColWrapper_80_20 {
+	POSITION: static
+}
+.threeColWrapper {
+	POSITION: static
+}
+.fourColWrapper {
+	POSITION: static
+}
+.genericInnerWrapper {
+	POSITION: relative
+}
+.col01 {
+	POSITION: relative
+}
+.col02 {
+	POSITION: relative
+}
+.col03 {
+	POSITION: relative
+}
+.col04 {
+	POSITION: relative
+}
+.twoColWrapper_40_60 .col01 {
+	PADDING-LEFT: 25px; MARGIN-LEFT: 0px
+}
+.twoColWrapper_50_50 .col01 {
+	PADDING-LEFT: 25px; MARGIN-LEFT: 0px
+}
+.twoColWrapper_70_30 .col01 {
+	PADDING-LEFT: 25px; MARGIN-LEFT: 0px
+}
+.twoColWrapper_30_70 .col01 {
+	PADDING-LEFT: 25px; MARGIN-LEFT: 0px
+}
+.twoColWrapper_80_20 .col01 {
+	PADDING-LEFT: 25px; MARGIN-LEFT: 0px
+}
+.twoColWrapper_40_60 .col01 .col01 {
+	PADDING-LEFT: 0px
+}
+.twoColWrapper_50_50 .col01 .col01 {
+	PADDING-LEFT: 0px
+}
+.twoColWrapper_70_30 .col01 .col01 {
+	PADDING-LEFT: 0px
+}
+.twoColWrapper_30_70 .col01 .col01 {
+	PADDING-LEFT: 0px
+}
+.twoColWrapper_80_20 .col01 .col01 {
+	PADDING-LEFT: 0px
+}
+.contentWrapper > DIV.hrFullWidth {
+	POSITION: relative
+}

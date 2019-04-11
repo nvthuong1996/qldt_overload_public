@@ -1,0 +1,327 @@
+﻿.landingPage .leftSideContent
+{
+	float:				left;
+	padding-top:		24px;
+}
+.landingPage .rightSideContent
+{
+	float:				right;
+	padding-top:		24px;
+}
+
+.landingPage .featuredImage
+{
+	margin-bottom:		12px;
+	border:				1px solid #A9A9A9;
+	width:				399px;
+	height:				256px;
+}
+
+
+
+
+
+
+.graphicNumberedList
+{
+	list-style:			none;
+	margin:				0; 
+}
+p + .graphicNumberedList
+{
+	padding-top:			12px;
+}
+.graphicNumberedList li
+{
+	padding-left:		45px;
+	border-bottom:		1px solid #9a9a9a;
+	margin-bottom:		9px;
+}
+.graphicNumberedList li.lastItem
+{
+	border-bottom:		none;
+}
+.graphicNumberedList h1
+{
+	color:				#66d324;
+	font-size:			16px;
+	padding-bottom:		4px;
+	float:				left;
+	width:				290px;
+}
+.graphicNumberedList p
+{
+	
+}
+.graphicNumberedList h1,
+.graphicNumberedList p
+{
+}
+
+.graphicNumberedList img
+{
+	float:				left;
+	margin-left:		-45px;
+}
+
+
+
+
+.logoLinkList
+{
+	list-style:		none;
+	margin:			0 0 20px 0;
+	padding:		0;
+}
+.logoLinkList li
+{
+	margin-bottom:		10px;
+}
+
+.allItemsList li p
+{
+	padding-bottom:		15px;
+}
+.linkList .source,
+.allItemsList .source
+{
+	font-style:			italic;
+}
+.linkList .date,
+.allItemsList .date
+{
+	line-height:		18px;
+}
+.allItemsList .postTitle,
+.allItemsList .title
+{
+	font-weight:		bold;
+}
+
+
+/* general column layout styles */
+.genericInnerWrapper
+{
+	padding:			18px 25px 0 25px;
+	margin-bottom:		20px;
+}
+
+
+.twoColWrapper_40_60,
+.twoColWrapper_50_50,
+.twoColWrapper_70_30,
+.twoColWrapper_30_70,
+.twoColWrapper_80_20,
+.threeColWrapper,
+.fourColWrapper,
+.genericInnerWrapper
+{
+
+}
+
+.col01, .col02, .col03, .col04
+{
+
+}
+
+.twoColWrapper_50_50 > .col01,
+.twoColWrapper_40_60 > .col01,
+.twoColWrapper_30_70 > .col01,
+.twoColWrapper_70_30 > .col01,
+.twoColWrapper_80_20 > .col01
+{
+	float:				left;
+	padding:			18px 27px 0 0;
+	margin-bottom:		20px;
+	margin-left:		25px;
+}
+.twoColWrapper_50_50 > .col02,
+.twoColWrapper_40_60 > .col02,
+.twoColWrapper_30_70 > .col02,
+.twoColWrapper_70_30 > .col02,
+.twoColWrapper_80_20 > .col02
+{
+	float:				right;
+	margin-bottom:		20px;
+	margin-right:		25px;
+	padding:			18px 0 0 0;
+}
+.twoColWrapper_70_30 > .col02,
+.twoColWrapper_80_20 > .col02
+{
+	padding-top:		29px;
+}
+.twoColWrapper_50_50 + .twoColWrapper_50_50 div,
+.twoColWrapper_40_60 + .twoColWrapper_40_60 div,
+.twoColWrapper_30_70 + .twoColWrapper_30_70 div,
+.twoColWrapper_70_30 + .twoColWrapper_70_30 div
+{
+	background:			none;
+	padding-top:		0;
+}
+
+
+.twoColWrapper_40_60 > .col01 { width: 350px; }
+.twoColWrapper_40_60 > .col02 { width: 505px; }
+
+.twoColWrapper_50_50 > .col01 {
+	width:				45%;
+	padding-right:		21px;
+}
+.twoColWrapper_50_50 > .col02 { width: 45%; }
+
+.col01 .twoColWrapper_50_50 .col01,
+.col02 .twoColWrapper_50_50 .col01
+{
+	width:				45%;
+	margin-left:		0;
+}
+.col01 .twoColWrapper_50_50 .col02,
+.col02 .twoColWrapper_50_50 .col02
+{
+	width:				47%;
+}
+
+
+.twoColWrapper_70_30 > .col01 { width: 560px; }
+.twoColWrapper_70_30 > .col02 { width: 260px; }
+
+.twoColWrapper_30_70 > .col01 { width: 257px; }
+.twoColWrapper_30_70 > .col02 { width: 566px; }
+
+.twoColWrapper_80_20 > .col01 { width: 633px; }
+.twoColWrapper_80_20 > .col02 { width: 182px; }
+
+/* nested two column layouts */
+.col01 .twoColWrapper_40_60 .col01,
+.col01 .twoColWrapper_50_50 .col01,
+.col01 .twoColWrapper_70_30 .col01,
+.col01 .twoColWrapper_30_70 .col01,
+.col01 .twoColWrapper_80_20 .col01,
+.col02 .twoColWrapper_40_60 .col01,
+.col02 .twoColWrapper_50_50 .col01,
+.col02 .twoColWrapper_70_30 .col01,
+.col02 .twoColWrapper_30_70 .col01,
+.col02 .twoColWrapper_80_20 .col01
+{
+	margin-left:		0;
+}
+.col01 .twoColWrapper_40_60 .col02,
+.col01 .twoColWrapper_50_50 .col02,
+.col01 .twoColWrapper_70_30 .col02,
+.col01 .twoColWrapper_30_70 .col02,
+.col01 .twoColWrapper_80_20 .col02,
+.col02 .twoColWrapper_40_60 .col02,
+.col02 .twoColWrapper_50_50 .col02,
+.col02 .twoColWrapper_70_30 .col02,
+.col02 .twoColWrapper_30_70 .col02,
+.col02 .twoColWrapper_80_20 .col02
+{
+	margin-right:		0;
+}
+
+
+
+.threeColWrapper .col01
+{
+	padding-right:		28px;
+	float:				left;
+	padding-top:		18px;
+	margin-left:		25px;
+}
+.threeColWrapper .col02
+{
+	padding-left:		25px;
+	float:				left;
+	padding-top:		18px;
+	padding-right:		24px;
+}
+.threeColWrapper .col03
+{
+	padding-left:		25px;
+	float:				left;
+	padding-top:		18px;
+	margin-right:		25px;
+}
+
+.threeColWrapper .col01 { width: 253px; }
+.threeColWrapper .col02 { width: 257px; }
+.threeColWrapper .col03 { width: 257px; }
+
+
+/* Nested three column wrapper */
+.col01 .threeColWrapper .col01,
+.col02 .threeColWrapper .col01
+{
+	width:				27%;
+	margin-left:		0;
+}
+.col01 .threeColWrapper .col02,
+.col02 .threeColWrapper .col02
+{
+	width:				27%;
+}
+.col01 .threeColWrapper .col03,
+.col02 .threeColWrapper .col03
+{
+	width:				27%;
+	margin-right:		0;
+}
+
+
+.fourColWrapper
+{
+	padding:			0 25px;
+}
+
+.fourColWrapper .col01,
+.fourColWrapper .col02,
+.fourColWrapper .col03,
+.fourColWrapper .col04
+{
+	float:				left;
+	margin-bottom:		20px;
+	width:				186px;
+	padding:			18px 20px 0 22px;
+}
+.fourColWrapper .col01
+{
+	padding-left:			0;
+}
+.fourColWrapper .col04
+{
+	padding-right:			0;
+	width:					182px;
+}
+
+.fourColWrapper .imgHeader
+{
+	margin-bottom:			15px;
+}
+
+
+
+/* Video popups on product overview pages */
+.thumbWrapper
+{
+
+}
+.thumbWrapper .videoThumb
+{
+	border:				1px solid #A6A6A6;
+	display:			block;
+	margin-bottom:		8px;
+}
+.thumbWrapper a.caption
+{
+	text-decoration:	none;
+	font-style:			italic;
+}
+.popupVideo
+{
+	display:			none;
+}
+
+
+
+

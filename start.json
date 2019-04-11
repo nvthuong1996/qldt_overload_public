@@ -1,0 +1,6 @@
+{
+    "name": "qldt2",
+    "script": "src/bin/www",
+    "watch": true,
+    "ignore_watch": [".git","node_modules"]
+  }

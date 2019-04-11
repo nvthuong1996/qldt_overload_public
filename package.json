@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/bin/www",
+    "test": "sudo rm -rf db_data && sudo docker-compose down && sudo docker system prune -f && sudo docker-compose build && sudo docker-compose up"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "eslint": "^5.11.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jsdom": "^13.1.0",
+    "md5": "^2.2.1",
+    "morgan": "~1.9.0",
+    "mysql": "^2.16.0",
+    "request": "^2.88.0"
+  }
+}

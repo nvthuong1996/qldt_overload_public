@@ -1,0 +1,331 @@
+<html>
+	<script type="text/javascript" src="/ajaxpro/prototype.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/core.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/converter.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.Logout,EduSoft.Web.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.GioiThieu,EduSoft.Web.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.Footer,EduSoft.Web.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.DangKyMonHoc,EduSoft.Web.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/lib.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart(d) {
+      	if(d){
+        var data = google.visualization.arrayToDataTable(d);
+	    }else{
+	    	var data = google.visualization.arrayToDataTable([
+	          ['Year', 'Sales'],
+	          ['',  1],
+	          ['',  1],
+	          ['',  1],
+	          ['',  1]
+	        ]);
+	    }
+
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        google.visualization.events.addListener(chart, 'select', ()=>{
+        	var selection = chart.getSelection();
+        	window.open('http://localhost:8181/ptit/rendertkb.php?tkb='+DSSV[selection[0].row],'_blank')
+        });
+
+        chart.draw(data, options);
+      }
+    </script>
+	<script type="text/javascript">
+		/*LoadMonHocOnline().then((e)=>{
+			var t = isTrungTKB(e);
+		})*/
+
+		//syncData();
+		/*EduSoft.Web.UC.DangKyMonHoc.LoadChuongTrinhDaoTaoKhoiLop((e)=>{
+			var r = matchKhoiLop(e.value);
+			debugger;
+		})*/
+
+		/*getDKMHSinhVien('B14DCCN762',1).then((e)=>{
+			debugger;
+			nmhHTML(e.tkb[0].nmh,6);
+			
+		});*/
+		
+		//locgiangvien();
+		//uploadAllMonHoc();
+	
+
+
+		//testTrungTKBAllSv();
+		
+		/*getDKMHSinhVien('b14dccn762',1).then((e)=>{
+			qq=e;
+			debugger;
+		})*/
+
+		//isTrungTKBAllSv();
+
+		/*loadDSDKMH().then((f)=>{
+			for(var i in f){
+				console.log(i);
+				debugger;
+				var e = f[i];
+				e.tkb= e.tkb.map((e)=>{
+					e.nmh = serializeTKB(e.nmh);
+					return e;
+				});
+				for(var i=0;i<e.tkb.length;i++){
+					for(var j=0;j<e.tkb.length;j++){
+						if(i==j) continue;
+						if(isTrungSerialize(e.tkb[i].nmh,e.tkb[j].nmh)){
+							console.log('Trùng');
+							return;
+						}
+					}
+				}
+			}
+		})*/
+
+		uploadAllMonHoc();
+
+
+
+		/*var TKB = {};
+		setTimeout(()=>{
+			LoadMonHocOffline().then((e)=>{
+				debugger;
+				e.shift();
+				e.map((f)=>{
+					if(f.msmh=='INT1328'){
+						f.nmh=getNmhFromGv(f.nmh,'T.T.V.Anh');
+					}
+					if(f.msmh=='INT1336'){
+						f.nmh=getNmhFromGv(f.nmh,'N.Đ.Long');
+					}
+					if(f.msmh=='INT1303'){
+						f.nmh=getNmhFromGv(f.nmh,'Đ.X.Chợ');
+					}
+					if(f.msmh=='INT1341'){
+						f.nmh=getNmhFromGv(f.nmh,'N.X.Bách');
+					}
+					if(f.msmh=='INT1340'){
+						f.nmh=getNmhFromGv(f.nmh,'T.B.Cường');
+					}
+					if(f.msmh=='INT1362'){
+						f.nmh=getNmhFromGv(f.nmh,'P.V.Sự');
+					}
+				})
+
+				var t=0;
+				for(var q=0;q<e.length;q++){
+					e[q].index=t;
+					t+=e[q].nmh.length;
+				}
+
+				TKB['basic'] = JSON.parse(JSON.stringify(e));
+
+
+
+				TKB['serialize'] = e.map((e)=>{
+					e.nmh = e.nmh.map((f)=>{
+						return serializeTKB(f,true);
+					});
+					return e;
+				})
+
+				isTrungMatrix(TKB['serialize']);
+
+				//Thử loại bỏ môn thực hành
+				TKB['serialize'] = TKB['basic'].map((e)=>{
+					e.nmh = e.nmh.map((f)=>{
+						return serializeTKB(f);
+					});
+					return e;
+				})
+
+
+				TEST = TKB['serialize'].map((e)=>{
+					var r = [];
+					for(var g=0;g<e.nmh.length;g++){
+						r.push(g+e.index);
+					}
+					return r;
+				})
+				var r=allPossibleCases(TEST);
+				console.log(r.length);
+				TESTBIEUDO(r);
+
+			});
+		},1000);*/
+
+
+
+
+
+
+
+		function getNmhFromGv (nmh,gv){
+			var result=[];
+			nmh.map((e)=>{
+				if(e[15][0]==gv){
+					result.push(e);
+				}
+			})
+			return result;
+		}
+
+		function serializeTKB(a,check){
+			// check la bo qua cac mon thuc hanh
+			var tuan_a = a[16],thu_a = a[11].map((e)=>{return converWeekToNumber(e)}),kip_a=a[12].map((e)=>{return parseInt(e)}),st_a=a[13].map((e)=>{return parseInt(e)}),gv_a=a[15],phong_a=a[14];
+			var result = [];
+			for(var i=0;i<tuan_a.length;i++){
+				if(check&&st_a[i]>2) continue;
+				for(var j=0;j<tuan_a[i].length;j++){
+					if(tuan_a[i][j]!='-'){	// Thỏa điều kiện
+						var _t =st_a[i];
+						var _tt = kip_a[i];
+						do{
+							var index = j*42+(thu_a[i]-2)*6+(_tt+1)/2;
+							_tt += 2;
+							var obj = {index:index,gv:gv_a[i],phong:phong_a[i],mdk:a[0]};
+							result.push(obj);
+							_t=_t/2;
+						}while(_t!=1);
+					}
+				}
+			}
+			result.sort(function sort(a,b){
+				return a.index-b.index;
+			})
+			return result;
+		}
+
+
+		function isTrungBasic(a,b){
+			debugger;
+			var tuan_a = a[16],thu_a = a[11].map((e)=>{return converWeekToNumber(e)}),kip_a=a[12].map((e)=>{return parseInt(e)}),st_a=a[13].map((e)=>{return parseInt(e)}),gv_a=a[15],phong_a=a[14];
+			var tuan_b = a[16],thu_b = a[11].map((e)=>{return converWeekToNumber(e)}),kip_b=a[12].map((e)=>{return parseInt(e)}),st_b=a[13].map((e)=>{return parseInt(e)}),gv_b=b[15],phong_b=b[14];
+			for(var item_a of kip_a){
+				for(var item_b of kip_b){
+					if(isTrungKip(kip_a[item_a],st_a[item_a],kip_b[item_b],st_b[item_b])){
+						// Bi trung
+
+					}
+				}
+			}
+		}
+
+		function isTrungSerialize(a,b){
+			for(var i=0;i<b.length;i++){
+				for(var j=0;j<a.length;j++){
+					// do mang da sort nen ta kiem tra chi vay thoi
+					if(a[j].index>b[i].index) break;
+
+					if(b[i].index==a[j].index){
+						// Bi trùng tkb
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+
+		function hoanviSerialize(a){
+			
+		}
+
+		// Tạo ra 1 ma trận để kiểm tra trùng tkb giữa các nhóm môn học
+		function isTrungMatrix(e){
+			// input la tkb dạng serialize
+			var length = e[e.length-1].index+e[e.length-1].nmh.length;
+			var result =[];
+			for(var i=0;i<length;i++){
+				result[i]=[];
+			}
+			// Các môn học thuộc 1 nhóm mh thì bị trùng
+			for(var i=0;i<e.length;i++){
+				for(var j=e[i].index;j<e[i].nmh.length+e[i].index;j++){
+					for(var t=e[i].index;t<e[i].nmh.length+e[i].index;t++){
+						result[j][t]=true;
+					}
+				}
+			}
+
+			for(var i=0;i<length;i++){
+				for(var j=0;j<length;j++){
+					if(result[i][j]) continue;
+					result[i][j]=isTrungSerialize(getMHformIndex(e,i)
+						,getMHformIndex(e,j));
+				}
+			}
+			DK=result;
+			return result;
+		}
+
+		function getMHformIndex(e,index){
+			for(var i=0;i<e.length;i++){
+				if(index>=e[i].index&&index<e[i].index+e[i].nmh.length){
+					return e[i].nmh[index-e[i].index];
+				}
+			}
+		}
+
+
+		function isTrungKip(kip_a,st_a,kip_b,st_b){
+			var a = [];
+			do{
+				a.push(kip_a++);
+				st_a=st_a/2;
+			}while(st_a != 1)
+
+			var b = [];
+			do{
+				b.push(kip_b++);
+				st_b=st_b/2;
+			}while(st_b != 1)
+
+			var result = [];
+			a.map((e)=>{
+				b.map((f)=>{
+					if(e==f){
+						result.push(e);
+					}
+				})
+			})
+			if(result.length==0) return null;
+		}
+
+		function converWeekToNumber(e){
+			if(e=='Hai') return 2;
+			if(e=='Ba') return 3;
+			if(e=='Tư') return 4;
+			if(e=='Năm') return 5;
+			if(e=='Sáu') return 6;
+			if(e=='Bảy') return 7;
+			if(e=='CN') return 8;
+			return null;
+		}
+
+		function isTrungTuanBasic(a,b){
+			var length = a.length>b.length?b.length:a.length;
+			var r = [];
+			for(var i=0;i<length;i++){
+				if(a[i]==b[i]){
+					r.push(a[i]);;
+				}
+			}
+			return r;
+		}
+
+
+	</script>
+
+	<div id="curve_chart" style="width: 1500px; height: 1000px"></div>
+</html>

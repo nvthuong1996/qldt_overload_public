@@ -1,0 +1,955 @@
+﻿/* Specific styles for elements on tier 2 pages */
+.tier2page .allItemsList li
+{
+	position:				relative;
+	padding-top:			15px;
+	margin-bottom:			0;
+}
+.tier2page .allItemsList li.clearBoth
+{
+	margin-bottom:			0;
+	padding-top:			0;
+}
+.tier2page .allItemsList li:first-child
+{
+	padding-top:			0;
+}
+.tier2page .allItemsList li p
+{
+	margin-bottom:			15px;
+	padding-bottom:			0;
+}
+.tier2page .allItemsList li.hrFullWidth
+{
+	height:				1px;
+	width:				100%;
+	background:			transparent url('../images/100-percent-width-gradient-bar-horiz.jpg') top center no-repeat;
+	margin:				0;
+	padding:			0;
+}
+
+.tier2page .allItemsList li.hr
+{
+	margin:				0;
+	padding:			0;
+}
+
+
+
+/* Override default AddThis button styles */
+#at20mc #at15s #at15s_head,
+#at20mc #at15s #at16pf
+{
+	display:				none;
+}
+
+#at20mc #at15s
+{
+	width:					240px !important;
+	border:					1px solid #a6a6a6;
+}
+#at20mc #at_hover
+{
+	padding:				12px 8px;
+}
+#at20mc #at_hover .at_item
+{
+	width:					95px !important;
+}
+#at20mc #at_hover .at_col1,
+#at20mc #at_hover .at_colNaN
+{
+	margin-left:			10px;
+}
+#at_hover .at_item.at_col1.athov,
+#at_hover .at_item.at_colNaN.athov
+{
+	margin-left:			9px !important;
+}
+
+#at20mc #at15s #at_msg,
+#at20mc #at15s #at16p label,
+#at20mc #at15s #at16nms,
+#at20mc #at15s #at_share .at_item,
+#at20mc #at15s #at16p,
+#at20mc #at15s,
+#at20mc #at15s #at16p form input,
+#at20mc #at15s #at16p form textarea
+{
+		font-size:			11px !important;
+}
+
+
+
+
+
+
+#AllForumsList .postTitle,
+#AllBlogsList .postTitle
+{
+	font-weight:		bold;
+}
+
+
+.featuredAppBlurb .title
+{
+	font-weight:		bold;	
+}
+.featuredAppBlurb .description
+{
+	margin-top:			5px;
+	padding-bottom:		15px;
+}
+
+
+.devs_windowsPage .upperContentWrapper .leftSideContent
+{
+	width:				400px;
+}
+.devs_windowsPage .upperContentWrapper .rightSideContent
+{
+	float:				right;
+	width:				116px;
+}
+.devs_windowsPage .upperContentWrapper .rightSideContent .buttonWrapper a
+{
+	display:			block;
+	width:				116px;
+	height:				30px;
+	margin-top:			15px;
+}
+.devs_windowsPage .upperContentWrapper .rightSideContent .videoThumbnailColumn
+{
+	float:				none;
+}
+
+/* Override Meet The Bloggers style since this page has 6 */
+.devs_windowsPage .meetTheBloggersWrapper
+{
+	margin-top:			0;
+}
+.devs_windowsPage .meetTheBloggersWrapper .ui-tabs-nav
+{
+	padding:			0;
+	height:				31px;
+}
+.devs_windowsPage .meetTheBloggersWrapper .ui-tabs-nav a
+{
+	margin-left:		0;
+	margin-right:		6px;
+}
+
+
+
+
+
+/* 4 Tab boxes on Developers sub pages */
+.ui-tabs-hide {
+     display: none;
+}
+.tier2page .azureCommunitiesTabBox
+{
+	visibility:		hidden;
+}
+.tier2page .azureCommunitiesTabBox .ui-tabs-nav
+{
+	list-style:			none;
+	margin:				0 0 13px 0;
+	padding:			0;
+	height:				23px;
+	border-bottom:		1px solid #a6a6a6;
+}
+.tier2page .azureCommunitiesTabBox .ui-tabs-nav li
+{
+	float:				left;
+}
+.tier2page .azureCommunitiesTabBox .ui-tabs-nav a
+{
+	display:			block;
+	width:				65px;
+	height:				17px;
+	padding-top:		6px;
+	text-align:			center;
+	text-decoration:	none;
+	font-weight:		bold;
+	font-size:			10px;
+	background:			none;
+	color:				#000;
+}
+
+.tier2page .azureCommunitiesTabBox .ui-tabs-nav .ui-state-default a
+{
+}
+.tier2page .azureCommunitiesTabBox .ui-tabs-nav .ui-state-active a
+{
+	background:			transparent url('../images/tab-box-sm-tab-bkgd.gif') 0 0 no-repeat;
+}
+
+.tier2page .azureCommunitiesTabBox .ui-tabs-nav .ui-state-default.ui-state-hover a,
+.tier2page .azureCommunitiesTabBox .ui-tabs-nav .ui-state-active.ui-state-hover a
+{
+	background-image:	none;
+	background-color:	#ebffc1;
+	border:				1px solid #a6a6a6;
+	border-bottom:		none;
+	padding-top:		5px;
+	width:				63px;
+}
+
+.tier2page .azureCommunitiesTabBox .ui-tabs-panel
+{
+	overflow-x:			hidden;
+}
+.tier2page .azureCommunitiesTabBox p.moreLink
+{
+	margin-bottom:		0;
+	margin-top:			25px;
+}
+.tier2page .azureCommunitiesTabBox .linkList
+{
+	margin-bottom:		0;
+}
+
+
+
+/* Meet The Bloggers box on /devs/windows/ */
+.ui-tabs-hide {
+     display: none;
+}
+.meetTheBloggersWrapper
+{
+	margin-top:			-33px;
+}
+.meetTheBloggersWrapper .ui-tabs-nav
+{
+	list-style:			none;
+	margin:				0 0 6px 0;
+	padding:			0 0 0 170px;
+	height:				24px;
+}
+.meetTheBloggersWrapper .ui-tabs-nav li
+{
+	float:				left;
+}
+.meetTheBloggersWrapper .ui-tabs-nav a
+{
+	display:			block;
+	width:				24px;
+	height:				24px;
+	margin-left:		6px;
+	text-decoration:	none;
+}
+.meetTheBloggersWrapper .ui-tabs-nav a img
+{
+	margin:				2px 0 0 2px;
+}
+.meetTheBloggersWrapper .ui-tabs-nav .ui-state-default .activeImg,
+.meetTheBloggersWrapper .ui-tabs-nav .ui-state-active .inactiveImg
+{
+	display:			none;
+}
+.meetTheBloggersWrapper .ui-tabs-nav .ui-state-active .activeImg
+{
+	display:			inline;
+}
+.meetTheBloggersWrapper .ui-tabs-nav .ui-state-active a,
+.meetTheBloggersWrapper .ui-tabs-nav .ui-state-hover a
+{
+	background:			transparent url('../images/over-state-bkgd.gif') no-repeat 0 0;
+}
+.meetTheBloggersWrapper .ui-tabs-panel .bloggerImgWrapper
+{
+	width:				54px;
+	height:				54px;
+	float:				left;
+	margin-right:		10px;
+	margin-bottom:		10px;
+	overflow:			hidden;
+}
+.meetTheBloggersWrapper .ui-tabs-panel .bloggerName
+{
+	font-weight:		bold;
+	padding-bottom:		0;
+	margin-bottom:		0;
+}
+.meetTheBloggersWrapper .ui-tabs-panel p
+{
+
+}
+
+
+.pricingInfoPage .offerModule
+{
+	background-color:	#E7F7FD;
+	border:				1px solid #ADD8EC;
+	padding:			15px 120px 15px 20px;
+	position:			relative;
+	margin-bottom:		15px;
+}
+.pricingInfoPage .offerModule h2
+{
+	font-size:			14px;
+}
+.pricingInfoPage .offerModule .buyButton,
+.pricingInfoPage .offerModule .detailsButton
+{
+	position:			absolute;
+	width:				75px;
+	height:				20px;
+	right:				15px;
+	text-align:			center;
+	background-color:	#FFFFFF;
+	text-decoration:		none;
+	padding-top:		5px;
+	border:				1px solid #000000;
+}
+.pricingInfoPage .offerModule .buyButton:hover,
+.pricingInfoPage .offerModule .detailsButton:hover
+{
+	background-color:	#EBFFC1;
+}
+.pricingInfoPage .offerModule .detailsButton
+{
+	top:				55px;
+}
+.pricingInfoPage .offerModule .buyButton
+{
+	top:				15px;
+}
+
+.pricingInfoPage .currencyDropdown
+{
+	width:				135px;
+}
+
+.currencyDropdownError
+{
+	color:				red;
+	visibility:			hidden;
+}
+
+
+
+/* FAQ page ********************************************************************/
+.faqPage .leftTitleWide 
+{
+	margin: 20px 0 0 0 ;
+}
+.faqPage ul.faqCategoryMenu 
+{
+	list-style-type: none;
+	width: 600px;
+	margin: 0 0 0px 0;
+	padding: 0 0 10px 0;
+}
+.faqPage ul.faqCategoryMenu li 
+{
+	float:			left;
+	width:			280px;
+	height:			27px;
+	line-height:	21px;
+	padding:		0;
+	margin :		0;
+}
+.faqPage ul.faqCategoryMenu a 
+{
+
+}
+.faqPage .faqBody
+{
+
+}
+.faqPage .topLink
+{
+	margin:				25px 0 30px 0;
+}
+
+
+
+/* Expando list styles */
+.expandoList
+{
+	margin-bottom:		20px;	
+}
+.expandoList a.expandall
+{
+	line-height: 30px;
+}
+.expandoList .expandoItem
+{
+	margin: 16px 0 0 0;
+	padding: 0 0 0 0px;
+}
+.expandoList .expanded 
+{
+	background:		transparent url('../images/bullet-arrow-down.png') 0 0 no-repeat;
+}
+.expandoList .collapsed
+{
+	background:		transparent url('../images/bullet-arrow.png') 0 0 no-repeat;
+}
+.expandoList a.contentToggle
+{
+	text-decoration:	none;
+	margin:				10px 0 10px 0;
+	padding:			0 0 0 20px;
+	display:			block;
+}
+.expandoList .expanded a.contentToggle
+{
+	font-weight:	bold;
+}
+.expandoList .content
+{
+	padding:			5px 5px 5px 5px;
+	margin:				0 0 0 18px;
+}
+
+
+
+
+/* Resources > Community page */
+#facebookBlurb,
+#twitterBlurb
+{
+	background-position:	0 0;
+	background-repeat:		no-repeat;
+	padding-left:			35px;
+	margin-top:				12px;
+}
+#facebookBlurb
+{
+	background-image:		url('../images/facebook-logo.gif');
+}
+#twitterBlurb
+{
+	background-image:		url('../images/twitter-logo.gif');
+}
+#facebookBlurb h2,
+#twitterBlurb h2
+{
+	padding-top:			2px;
+}
+
+
+
+#accessControlInfographic,
+#serviceBusInfographic,
+#azureFabricInfographic
+{
+	display:		block;
+	border:			1px solid #a6a6a6;
+	height:			160px;
+}
+#accessControlInfographic img,
+#serviceBusInfographic img,
+#azureFabricInfographic img
+{
+	margin-top:		5px;
+	margin-left:	5px;
+}
+#accessControlInfographic
+{
+	width:			257px;
+}
+#serviceBusInfographic
+{
+	width:			247px;
+}
+#azureFabricInfographic
+{
+	width:			215px;
+}
+.infographicCaption
+{
+	margin-top:			8px;
+	margin-bottom:		25px;
+}
+.infographicCaption a,
+.infographicCaption a:visited
+{
+	text-decoration:	none;
+	font-style:			italic;
+}
+
+
+/* Get Started page */
+.anchorLinks
+{
+	list-style:		none;
+	margin:			15px 0 10px 0;
+	padding:		0;
+	height:			35px;
+}
+.anchorLinks li
+{
+	float:			left;
+	margin-right:	43px;
+}
+.anchorLinks li.last
+{
+	margin-right:	0;
+}
+.getStartedPage .getStartedList
+{
+	list-style:		none;
+	padding:		0;
+	margin:			0;
+}
+.getStartedPage ul .getStartedList,
+.getStartedPage ol .getStartedList
+{
+	margin-top:		12px;
+}
+.getStartedPage .getStartedList > li
+{
+	background:		transparent url('../images/get-started-list-image.gif') 0 2px no-repeat;
+	padding-left:	20px;
+	margin-bottom:	20px;
+}
+.getStartedPage .getStartedList ul
+{
+	list-style-type:	disc;
+}
+.getStartedPage .getStartedList ol ol li,
+.getStartedPage .getStartedList ul ol li,
+.getStartedPage .getStartedModule ul ol li,
+.getStartedPage .getStartedModule ol ol li
+{
+	list-style-type:	decimal;
+	padding-left:		4px;
+	margin-left:		22px;
+	padding-bottom:		0;
+	margin-bottom:		8px;
+}
+.getStartedPage .getStartedList ol ul,
+.getStartedPage .getStartedList ul ul,
+.getStartedPage .getStartedModule ol ul,
+.getStartedPage .getStartedModule ul ul
+{
+	margin-left:		0;
+}
+.getStartedPage .getStartedList ol ul li,
+.getStartedPage .getStartedList ul ul li,
+.getStartedPage .getStartedModule ol ul li,
+.getStartedPage .getStartedModule ul ul li
+{
+	padding-left:		10px;
+	margin-left:		16px;
+	padding-bottom:		0;
+	margin-bottom:		8px;
+}
+.getStartedPage .getStartedList h3
+{
+	font-size:			11px;
+	margin-bottom:		6px;
+}
+.getStartedPage ol
+{
+	margin-left:			0;
+}
+.getStartedPage .getStartedList h3 + ol
+{
+	margin-top:			10px;
+}
+.getStartedPage ol li
+{
+	list-style-type:		none;
+	background-repeat:		no-repeat;
+	background-position:	0 0;
+	padding:				1px 0 10px 27px;
+	margin-bottom:			0;
+}
+.getStartedPage ol li ul li
+{
+	list-style-type:		disc;
+}
+
+#getStartedImageLinks
+{
+	margin-bottom:			20px;
+	margin-top:				7px;
+}
+.getStartedPage .getStartedModule
+{
+}
+.getStartedPage .getStartedModule ol
+{
+	padding:				15px 25px 0 15px;
+	margin-bottom:			25px;
+	border-width:			2px;
+	border-style:			solid;
+	border-top:				none;
+	width:					590px;
+}
+.getStartedPage .getStartedModule ol ol
+{
+	padding:				0;
+	margin-bottom:			0;
+	border-width:			0;
+	border-style:			none;
+	width:					auto;
+}
+.getStartedPage .getStartedModule h2
+{
+	height:					20px;
+	color:					#FFFFFF;
+	padding:				5px 0 7px 15px;
+	width:					619px;
+	font-size:				13px;
+	font-weight:			bold;
+}
+.getStartedPage #getStartedModule01 ol
+{
+	border-color:			#7ce3f2;
+}
+.getStartedPage #getStartedModule01 h2
+{
+	background:				#7ce3f2 url('../images/get-started-module-01-top.gif') no-repeat 0 0;
+}
+.getStartedPage #getStartedModule02 ol
+{
+	border-color:			#53cae9;
+}
+.getStartedPage #getStartedModule02 h2
+{
+	background:				#53cae9 url('../images/get-started-module-02-top.gif') no-repeat 0 0;
+}
+.getStartedPage #getStartedModule03 ol
+{
+	border-color:			#16a5d9;
+}
+.getStartedPage #getStartedModule03 h2
+{
+	background:				#16a5d9 url('../images/get-started-module-03-top.gif') no-repeat 0 0;
+}
+
+
+
+
+
+/* Share This button */
+.shareButton,
+.shareButtonTopRight
+{
+	width:				107px;
+	height:				23px;
+	margin-bottom:		14px;
+	background:			transparent url('../images/share-this-btn.gif') no-repeat 0 0;
+}
+.shareButton a,
+.shareButtonTopRight a
+{
+	display:			block;
+	width:				107px;
+	height:				23px;
+}
+.shareButton .share-link-wrapper,
+.shareButtonTopRight .share-link-wrapper
+{
+	display:			inline;
+}
+.shareButtonTopRight
+{
+	float:				right;
+}
+
+
+body #share-box
+{
+	width:				270px;
+	border:				1px solid #a6a6a6;
+}
+#share-box #share-menu
+{
+	display:			none;
+}
+body #share-box #share-content-inner
+{
+	padding:			10px 0 10px 10px;
+}
+#share-box #share-link-list
+{
+	list-style-type:	none;
+}
+#share-box #share-link-list li
+{
+	float:				left;
+}
+#share-box #share-link-list a
+{
+	display:			block;
+	width:				115px;
+	height:				22px;
+	color:				#000000;
+	vertical-align:		top;
+	margin-bottom:		8px;
+	margin-right:		15px;
+}
+#share-box #share-link-list a:hover
+{
+	color:		#a6a6a6;
+}
+#share-box #share-close
+{
+	color:				#a6a6a6;
+	text-decoration:	none;
+}
+#share-box #share-link-list a img
+{
+	float:				left;
+	display:			block;
+	width:				16px;
+	height:				16px;
+	margin-right:		4px;
+}
+
+
+/* Pricing Info/Offers page */
+.pricingInfoPage div#fancy_div
+{
+	background-color:		#FFFFFF;
+}
+.pricingInfoPage #pagegate-contents
+{
+	padding:			10px;
+	color:				#000000;
+	text-align:			center;
+}
+.pricingInfoPage #pagegate-contents p
+{
+	font-size:			13px;
+	line-height:		19px;
+}
+.pricingInfoPage #pagegate-contents #cancelLink
+{
+	font-weight:		bold;
+}
+
+
+
+/* homepage styles */
+.homepage .threeColWrapper .col01
+{
+	width:				390px;
+	margin-right:		64px;
+	padding-right:		0;
+}
+.homepage .threeColWrapper .col02
+{
+	width:				225px;
+	background:			none;
+	padding-left:		0;
+}
+.homepage .threeColWrapper .col03
+{
+	width:				200px;
+	padding-left:		25px;
+	background:			transparent url('../images/column-divider.png') 0 0 no-repeat;
+}
+.homepage .threeColWrapper .col01,
+.homepage .threeColWrapper .col02
+{
+	float:				left;
+	padding-top:		24px
+}
+.homepage .threeColWrapper .col03
+{
+	float:				right;
+	padding-top:		24px;
+}
+
+
+
+
+#homepageSlideshowWrapper
+{
+	width:				638px;
+	height:				194px;
+	float:				left;
+	position:			relative;
+	margin-bottom:		15px;
+}
+#homepageSlideshowSlides
+{
+	width:				638px;
+	height:				166px;
+}
+#homepageSlideshowSlides img
+{
+	border:				1px solid #a9a9a9;
+	display:			none;
+}
+#homepageSlideshowButtons
+{
+	position:			absolute;
+	right:				0;
+	top:				175px;
+}
+#homepageSlideshowButtons a
+{
+	float:				left;
+	margin-left:		5px;
+	display:			block;
+	width:				15px;
+	height:				15px;
+	border:				1px solid #a9a9a9;
+	color:				#FFFFFF;
+}
+#homepageSlideshowButtons a.activeSlide 
+{
+	background-color:	#8bdc15;
+	color:				#8bdc15;
+}
+.homepage h1
+{
+	position:			relative;
+}
+.homepage h1 .rssLink
+{
+	position:			absolute;
+	margin-left:		0;
+	left:				-20px;
+	top:				3px;
+}
+.homepage .twoColWrapper_80_20 > .col02
+{
+	padding-top:		18px;
+}
+
+
+
+.silverlightPlayerFloatLeft
+{
+	float:				left;
+	margin:				20px 20px 20px 0;
+}
+
+.signUpButton
+{
+	display:			block;
+	height:				38px;
+}
+
+
+/* specific landing page styles */
+.getStartedPage .leftSideContent
+{
+	width:				365px;
+}
+.getStartedPage .rightSideContent
+{
+	width:				525px;
+}
+.videoThumbnailColumn
+{
+	float:				right;
+	width:				100px;
+}
+.videoThumbnailColumn .imgLink
+{
+	display:			block;
+	margin-top:			27px;
+}
+.videoThumbnailColumn .imgLink.firstLink
+{
+	margin-top:			0;
+}
+.videoThumbnailColumn p
+{
+	margin:				12px 0 0 0;
+}
+
+.devsPage .threeColWrapper .col01
+{
+	width:				402px;
+}
+.devsPage .threeColWrapper .col02
+{
+	background:			none;
+	width:				205px;
+}
+.devsPage .threeColWrapper .col03
+{
+	width:				206px;
+}
+
+
+.devsPage .videoThumbnailRow
+{
+	list-style:			none;
+	margin:				0;
+	padding:			0;
+}
+
+.devsPage .videoThumbnailRow li
+{
+	float:				left;
+	width:				164px;
+	margin-left:		69px;
+}
+.devsPage .videoThumbnailRow li.firstLink
+{
+	margin-left:		0;
+}
+.devsPage .videoThumbnailRow li.moreLink
+{
+	float:				none;
+	clear:				both;
+	margin-left:		0;
+	padding-top:		15px;
+	text-align:			right;
+	width:				100%;
+}
+.devsPage .videoThumbnailRow li img
+{
+	border:				1px solid #03b3df;
+}
+
+
+
+.productsOverviewPage .heroCopy p
+{
+	width:				430px;
+	float:				left;
+}
+.productsOverviewPage .heroCopy ul
+{
+	width:				415px;
+	float:				left;
+}
+.productsOverviewPage .heroCopy .thumbWrapper
+{
+	margin-left:		25px;
+	width:				150px;
+	float:				right;
+}
+
+
+
+
+
+
+/* Case Studies/Evidence page */
+#CaseStudiesList .title
+{
+	line-height:		22px;
+}
+
+#CaseStudiesList li.hr
+{
+	margin-bottom:		0;
+}
+#CaseStudiesList .companyLogo
+{
+	float:				left;
+	width:				250px;
+	padding-top:		10px;
+	padding-bottom:     15px;
+	text-align:			center;
+}
+#CaseStudiesList p
+{
+	float:				right;
+	width:				600px;
+}

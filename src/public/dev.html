@@ -1,0 +1,453 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><link id="ctl00_favicon" rel="shortcut icon" type="image/x-icon" href="Images/Config.gif">
+    <script src="JS/CheckDate.js" type="text/javascript"></script>
+    <script src="JS/jquery-2.2.1.js" type="text/javascript"></script>
+    <script src="JS/dialog.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/ajaxpro/prototype.ashx"></script>
+    <script type="text/javascript" src="/ajaxpro/core.ashx"></script>
+    <script type="text/javascript" src="/ajaxpro/converter.ashx"></script>
+    <script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.Logout,EduSoft.Web.ashx"></script>
+    <script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.GioiThieu,EduSoft.Web.ashx"></script>
+    <script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.Footer,EduSoft.Web.ashx"></script>
+    <script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.DangKyMonHoc,EduSoft.Web.ashx"></script>
+    <script type="text/javascript" src="/JS/crawler.js"></script>
+    <script type="text/javascript" src="/algorithm/core.js"></script>
+    <script type="text/javascript" src="/JS/dkchon.js"></script>
+    <script type="text/javascript" src="/algorithm/vetcan.js"></script>
+    <script type="text/javascript" src="/JS/lib.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>
+	Cổng Thông Tin Đào Tạo-Cơ Sở Miền Bắc (v2018.03.15)
+</title>
+        <link href="App_Themes/Standard/Standard.css" type="text/css" rel="stylesheet">
+        <link href="App_Themes/Standard/StyleSheet.css" type="text/css" rel="stylesheet">
+</head>
+
+<body background="App_Themes/Standard/Images/background.png" >
+    <form name="aspnetForm" method="post" action="default.aspx?page=thoikhoabieu&amp;sta=0&amp;id=B15DCCN325" id="aspnetForm" enctype="multipart/form-data">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+</div>
+
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334">
+</div>
+    <div align="center">
+        <div class="base">
+        
+        <table><tbody><tr><td>
+             
+<div style="background-image:url(Images/bg_heading_thongbao.png)">
+        <table width="1000px"><tbody><tr><td height="20px" style="padding-left:50px" valign="bottom" align="right">
+
+<div id="ctl00_Header1_ucLogout_dLog" class="logout" style="text-align: right; margin-bottom:0px">
+
+    <img src="App_Themes/Standard/Images/US.gif" alt="English" onclick="changeLanguage_click('_us')" id="imgUS" title="English">
+    <img src="App_Themes/Standard/Images/VI.gif" alt="Vietnamese" onclick="changeLanguage_click('_vi')" id="imgVi" title="Vietnamese">
+<span id="ctl00_Header1_ucLogout_lblNguoiDung" class="Label" style="color:#FF3300;font-size:12px;font-weight:bold;"></span>&nbsp;
+    
+    
+    <a id="ctl00_Header1_ucLogout_lbtnLogOut" href="javascript:__doPostBack('ctl00$Header1$ucLogout$lbtnLogOut','')" style="color:#FF3300;font-size:10pt;font-weight:bold;font-family: 'Tahoma', Times, serif">Đăng Nhập</a>
+    &nbsp;<select id="selectFont" style="font-size: 11px; width: 100px; color: #000080;" onchange="selectFont_change()">
+        <option value="uni">-------Font-------</option>
+        <option value="uni" selected="">Font Unicode</option>
+        <option value="abc">Font ABC</option>
+        <option value="vni">Font Vni</option>
+        <option value="not">Text không
+            dấu</option>
+    </select>
+</div>
+
+            </td></tr></tbody></table>
+</div>
+
+             
+
+<style type="text/css">
+    .styleApplication {
+        font-size: 26;
+        font-weight: bold;
+    }
+</style>
+
+<div class="left-menu">
+    <div class="right-menu">
+
+        <div class="main-menu" style="height: 110px">
+
+            <div id="ctl00_menu_pnlGioithieu" class="out-menu">
+	
+                <div class="left"></div>
+                <div class="center" style="white-space: nowrap">
+                    <a href="Default.aspx?page=gioithieu">
+                        <span id="ctl00_menu_lblTrangChu" class="Label">TRANG CHỦ</span></a>
+                </div>
+                <div class="right"></div>
+            
+</div>
+            
+            <div id="ctl00_menu_dkmonhoc" class="out-menu">
+	
+                <div class="left"></div>
+                <div class="center" style="white-space: nowrap">
+                    <a href="Default.aspx?page=dkmonhoc">
+                        <span id="ctl00_menu_lblDangKyMonHoc" class="Label">ĐĂNG KÝ MÔN HỌC</span></a>
+                </div>
+                <div class="right"></div>
+            
+</div>
+            
+            <div id="ctl00_menu_xemlichthi" class="out-menu">
+	
+                <div class="left"></div>
+                <div class="center" style="white-space: nowrap">
+                    <a href="Default.aspx?page=nhapmasv&amp;flag=XemLichThi">
+                        <span id="ctl00_menu_lblXemLichThi" class="Label">XEM LỊCH THI</span></a>
+                </div>
+                <div class="right"></div>
+            
+</div>
+            <div id="ctl00_menu_xemlichthilai" class="out-menu">
+	
+                <div class="left"></div>
+                <div class="center" style="white-space: nowrap">
+                    <a href="Default.aspx?page=xemlichthilai">
+                        <span id="ctl00_menu_lblXemLichThiLai" class="Label">XEM LỊCH THI LẠI</span></a>
+                </div>
+                <div class="right"></div>
+            
+</div>
+            
+            <div id="ctl00_menu_thoikhoabieu" class="over-menu">
+	
+                <div class="left"></div>
+                <div class="center" style="white-space: nowrap">
+                    <a href="Default.aspx?page=thoikhoabieu">
+                        <span id="ctl00_menu_lblThoiKhoaBieu" class="Label">XEM TKB</span></a>
+                </div>
+                <div class="right"></div>
+            
+</div>
+            <div id="ctl00_menu_xemhocphi" class="out-menu">
+	
+                <div class="left"></div>
+                <div class="center" style="white-space: nowrap">
+                    <a href="Default.aspx?page=xemhocphi">
+                        <span id="ctl00_menu_lblXemHocPhi" class="Label">XEM HỌC PHÍ</span></a>
+                </div>
+                <div class="right"></div>
+            
+</div>
+            <div id="ctl00_menu_xemdiemthi" class="out-menu">
+	
+                <div class="left"></div>
+                <div class="center" style="white-space: nowrap">
+                    <a href="Default.aspx?page=xemdiemthi">
+                        <span id="ctl00_menu_lblXemDiem" class="Label">XEM ĐIỂM</span></a>
+                </div>
+                <div class="right"></div>
+            
+</div>
+            <div id="ctl00_menu_thaydoittcn" class="out-menu">
+	
+                <div class="left"></div>
+                <div class="center" style="white-space: nowrap">
+                    <a href="Default.aspx?page=thaydoittcn">
+                        <span id="ctl00_menu_lblThayDoiTTCN" class="Label">SỬA TT CÁ NHÂN</span></a>
+                </div>
+                <div class="right"></div>
+            
+</div>
+            
+            
+
+            <div id="ctl00_menu_ykiensinhvien" class="out-menu">
+	
+                <div class="left"></div>
+                <div class="center" style="white-space: nowrap">
+                    <a href="Default.aspx?page=ykiensinhvien">
+                        <span id="ctl00_menu_lblykiensinhvien" class="Label">GÓP Ý KIẾN</span></a>
+                </div>
+                <div class="right"></div>
+            
+</div>
+
+            
+            <div id="ctl00_menu_pnlHDSD" class="out-menu">
+	
+                <div class="left"></div>
+                <div class="center" style="white-space: nowrap">
+                    <a href="HDDKMH.htm">
+                        <span id="ctl00_menu_Label8" class="Label">HƯỚNG DẪN ĐĂNG KÝ</span></a>
+                </div>
+                <div class="right"></div>
+            
+</div>
+            
+        </div>
+
+    </div>
+
+</div>
+
+             </td></tr><tr><td height="500px" valign="top">
+                
+
+<span id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1"><a id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_lbTarget" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ctl00$MessageBox1$lbTarget','')"></a><div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_panelMessageBox" class="confirmBox" style="display: none; position: fixed; z-index: 100001;">
+	<div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_panelHeader" class="header" style="background: url(Images/header.png);repeat-x: 0px -200px;">
+		<div class="msg">
+			<span id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_lblPopupHeader" class="Label" style="color:White;font-family:Arial Black;"></span>
+		</div><input type="image" name="ctl00$ContentPlaceHolder1$ctl00$MessageBox1$imgCloseButton" id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_imgCloseButton" class="close" src="/WebResource.axd?d=fOvwdRN3d4K62ymHX3ddUe-iqh9j5udm3gctCIKutBsrXrNHwF9yByQTSRjAkZnBmisIjiMH6kbX3EOZzZu_8HbPzxFLNdw0fgHCjbkX_49qCCIstNA3Bnos1WilnSZAzSwDwoH3RwwVe3Y7foqAmFMMr3var6X3I2RGn_axOv2r94sO0&amp;t=636564845460000000" style="border-width:0px;">
+	</div><div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_panelBody" class="body" style="background-color:#E1E5F0;">
+		<div class="body-left" style="background-color:#E1E5F0;">
+			<img id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_ctl02" src="" style="border-width:0px;">
+		</div><div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_ctl03" class="body-right" style="background-color:#E1E5F0;">
+			<span id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_lblMessageDisplay" class="Label" style="font-family:Tahoma;color:#263F75;"></span>
+		</div>
+	</div><div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_panelFooter" class="footer" style="background-color:#E1E5F0;">
+		<div class="right" style="background-color:#E1E5F0;">
+			<input type="image" name="ctl00$ContentPlaceHolder1$ctl00$MessageBox1$btnOk" id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_btnOk" class="button_small_active" src="/WebResource.axd?d=k-rbqBiAGq4Qcyoi5zlGF7JZrhrxbuMyEcan80K18x4QApmIa6xXZ8unIlwY5mDeuAEnzIuciBg5Q6Th-fK3tcdDGZdIR_0D6XyGahBG572qsL3eqaxIlcW7T_bnTub3JV4nIKQa9_t-rfi5x17C1XH1IWcLau9tX_iECykpuYA2sAdy0&amp;t=636564845460000000" style="height:22px;width:70px;border-width:0px;">
+		</div>
+	</div>
+</div><div id="ctl00_ContentPlaceHolder1_ctl00_MessageBox1_ajaxModal_backgroundElement" class="msgbox_messagemodalbackground" style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;"></div></span>
+
+
+<style type="text/css">
+    #dhtmltooltip {
+        position: absolute;
+        padding: 2px;
+        visibility: hidden;
+        z-index: 100;
+        height: 230px;
+    }
+
+    #dhtmltooltip2 {
+        position: absolute;
+        padding: 2px;
+        visibility: hidden;
+        z-index: 101;
+        height: 15px;
+    }
+
+    .style1 {
+        height: 34px;
+    }
+
+    .style2 {
+        height: 23px;
+    }
+</style>
+<div id="dhtmltooltip" style="background-image: url(&quot;App_Themes/Standard/Images/tooltip.png&quot;); text-align: center; left: -1000px; top: 360px; visibility: hidden;"><table cellpadding="0" border="0" cellspacing="0" style="text-align:left;font-size:10pt;font-family:tahoma;font-weight:bold"><tbody><tr height="20px"><td colspan="3" valign="top"><table><tbody><tr><td width="5px"></td><td width="30px" valign="top"><img src="App_Themes/Standard/Images/Learning.gif" width="30" height="42"></td><td align="left"><span style="font-size:11pt ;font-weight:bold;color:#ffffff">Nhập môn công nghệ phần mềm</span></td></tr></tbody></table></td></tr><tr height="20px"><td width="40px"></td><td colspan="2"> </td></tr><tr><td width="40px"></td><td>Mã Môn Học :</td><td><span style="color:Teal">INT1340 nhóm 01 </span></td></tr><tr><td width="40px"></td><td>Tên Môn Học :</td><td><span style="color:Teal">Nhập môn công nghệ phần mềm</span></td></tr><tr><td width="40px"></td><td width="120px">Phòng Học :</td><td><span style="color:Teal">501-A2</span></td></tr><tr><td width="40px"></td><td>Thứ :</td><td><span style="color:Teal">Thứ Sáu</span></td></tr><tr><td width="40px"></td><td width="120px">Tiết Bắt Đầu :</td><td><span style="color:Teal">1</span></td></tr><tr><td width="40px"></td><td width="120px">Số Tiết :</td><td><span style="color:Teal">2</span></td></tr><tr><td width="40px"></td><td>Giảng Viên :</td><td><span style="color:Teal">N.M.Hùng</span></td></tr>  <tr><td width="40px"></td><td>Lớp :</td><td><span style="color:Teal">D15-168</span></td></tr>  <tr><td width="40px"></td></tr></tbody></table></div>
+<div id="dhtmltooltip2" style="text-align: center"></div>
+
+<div class="navigate-base">
+    <div class="title-base">
+        <div class="title">
+            <table style="width: 480px">
+                <tbody><tr>
+                    <td width="10px">
+                        <img src="App_Themes/Standard/Images/icon_04b.gif">
+                    </td>
+                    <td>
+                        <span id="ctl00_ContentPlaceHolder1_ctl00_lbltieudetkb" class="Label">Điều kiện để chọn thời khóa biểu</span>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+    <table>
+        <tbody><tr id="ctl00_ContentPlaceHolder1_ctl00_pnlTTCanhan">
+	<td colspan="2">
+
+                
+
+            </td>
+</tr>
+
+        <tr>
+            <td rowspan="3" width="80px" height="65px">
+                <img src="App_Themes/Standard/Images/icon_lich.png" alt="" width="70px" height="60px"></td>
+            <td align="left" valign="middle">
+                <span id="ctl00_ContentPlaceHolder1_ctl00_lblTT" class="Label" style="font-size:10pt;">Thời gian</span>&nbsp; 
+      <select name="ctl00$ContentPlaceHolder1$ctl00$ddlChonNHHK" onchange="javascript:sangchieu()" id="ctl00_ContentPlaceHolder1_ctl00_ddlChonNHHK" class="DropDown" style="height:20px;width:215px;">
+	<option selected="selected" value="1">Cả ngày</option>
+	<option value="2">Sáng</option>
+	<option value="3">Chiều</option>
+
+</select>
+<span id="ctl00_ContentPlaceHolder1_ctl00_pnlTKB" style="vertical-align: middle">
+           	<input type="checkbox" onclick="thuSelect('allthu')" id="allthu" checked value="HaiBaTưNămSáuBảyCN"><span style="font-size:10pt;">Tất cả</span>
+           	<input type="checkbox" onclick="thuSelect('t2')" id="t2" value="Hai"><span style="font-size:10pt;">Thứ 2</span>
+           	<input type="checkbox" onclick="thuSelect('t3')" id="t3" value="Ba"><span style="font-size:10pt;">Thứ 3</span>
+           	<input type="checkbox" onclick="thuSelect('t4')" id="t4" value="Tư"><span style="font-size:10pt;">Thứ 4</span>
+           	<input type="checkbox" onclick="thuSelect('t5')" id="t5" value="Năm"><span style="font-size:10pt;">Thứ 5</span>
+           	<input type="checkbox" onclick="thuSelect('t6')" id="t6" value="Sáu"><span style="font-size:10pt;">Thứ 6</span>
+           	<input type="checkbox" onclick="thuSelect('t7')" id="t7" value="Bảy"><span style="font-size:10pt;">Thứ 7</span>
+           	<input type="checkbox" onclick="thuSelect('t8')" id="t8" value="CN"><span style="font-size:10pt;">CN</span>
+</span></td>
+        </tr>
+        <tr>
+            <td align="left" class="style1" style="font-size: 10px">
+    <span id="ctl00_ContentPlaceHolder1_ctl00_lblTT" class="Label" style="font-size:10pt;">Giảng Viên</span>
+                <select name="ctl00$ContentPlaceHolder1$ctl00$ddlChonNHHK" onchange="javascript:renderDsGv()" id="ctl00_ContentPlaceHolder1_ctl00_ddlChonNHHK2" class="DropDown" style="height:20px;width:215px;">
+    <option selected disabled hidden>Chọn giảng viên</option>
+
+</select>
+                
+                
+                
+                
+                <span id="ctl00_ContentPlaceHolder1_ctl00_lblTT" class="Label" style="font-size:10pt;">Loại thời khóa biểu: </span>
+<select name="ctl00$ContentPlaceHolder1$ctl00$ddlTuan" onchange="javascript:loaitkb()" id="ctl00_ContentPlaceHolder1_ctl00_ddlTuan" class="DropDown" style="width:300px;">
+	<option value="1">Thời khóa biểu đồng đều</option>
+	<option value="2">Thời khóa biểu tập trung</option>
+
+</select>
+<td align="left" style="padding-right: 20px"><input type="button"  id="btnLuu" value="Tìm kiếm" onclick="vetcanBeta(TKBSELECT)">
+    <td align="left" style="padding-right: 20px"><input type="button" id="renderBtn" value="Render" onclick="renderLai()">
+    </td>
+</td>
+                &nbsp;</td>
+            
+        </tr>
+        <tr>
+            
+        </tr>
+    </tbody></table>
+
+    <div style="width: 100%">
+        
+    </div>
+    <hr>
+    <div style="width: 100%; text-align: left">
+
+
+
+
+
+  <div id="ctl00_ContentPlaceHolder1_ctl00_pnlTKB2">
+
+  </div>
+  <span id="slTKBSELECT" style="font-size: 15px;color: #FF3300"></span>
+    
+
+
+    </div>
+
+    <div id='loading'>
+    <div> <img align="center" src="/App_Themes/loader.gif" alt="">   </div>
+    <span>Loading</span>
+    </div>
+
+    
+    
+</div>
+
+<div class="navigate-base" id="chart_tkb" style="height: 500px"></div>
+
+             </td></tr><tr><td>
+                
+
+<style type="text/css">
+   
+    .style3
+    {
+        width: 70px;
+    }
+    .style4
+    {
+        width: 129px;
+    }
+    .style5
+    {
+        width: 1019px;
+    }
+   
+</style>
+
+<div class="footer">
+<table width="100%"><tbody><tr><td align="left" class="style5">
+<img src="App_Themes/Standard/Images/icon_11c.gif" alt="">
+<span class="LogoFooter"><span id="ctl00_Footer1_lblCompany" class="Label">Copyright ©2009 Cơ Sở Miền Bắc. Quản lý bởi </span></span>
+</td>
+    
+        <td valign="top" align="left" class="style4">
+        <img src="App_Themes/Standard/Images/iconHome.png" alt="" align="right">    
+        </td>
+        <td align="left" class="style3">
+        <a href="Default.aspx"><span id="ctl00_Footer1_lbltrangchu" class="Label">Trang Chủ</span></a>
+        </td>
+        
+        
+</tr>
+<tr>
+<td class="style5">
+    <img src="App_Themes/Standard/Images/icon_11c.gif" alt=""> 
+    <a href="http://www.edusoft.net.vn" target="_blank"><span id="ctl00_Footer1_lblCopyRight" class="Label">Thiết kế bởi cty Phần mềm Anh Quân</span></a>
+    
+    
+     
+</td>
+<td align="right" valign="top" class="style4"> 
+    <img src="App_Themes/Standard/Images/topTen.gif" width="15px" alt="">
+    </td>
+    <td class="style3">
+    <a href="#Top" title="Go to top" style="text-decoration: none; font-family:Tahoma;font-size:8pt">
+    <span id="ctl00_Footer1_lbltop" class="Label">Đầu Trang</span>
+    </a>
+</td>
+<td align="right"><a href="Default.aspx?page=thongtinsp"><span id="ctl00_Footer1_lblAbout" class="Label">About</span></a></td>
+</tr>
+
+</tbody></table></div>
+  
+            </td></tr></tbody></table>
+        </div>
+     </div>
+
+</form>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart(d) {
+    if(d){
+    var data = google.visualization.arrayToDataTable(d);
+    }else{
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales'],
+          ['',  1],
+          ['',  1],
+          ['',  1],
+          ['',  1]
+        ]);
+    }
+
+
+    var options = {
+      title: 'Biểu đồ đánh giá',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('chart_tkb'));
+    google.visualization.events.addListener(chart, 'select', ()=>{
+        debugger;
+        var selection = chart.getSelection();
+        if(!selection[0]) return;
+        var tkb = JSON.parse(VIEWTKB[selection[0].row+1]).tkb;
+        var _t = convertObjToTkB2(tkb,_NMH);
+        console.log(rankLv1(_t));
+
+        window.open('http://localhost:9191/default.aspx?page=thoikhoabieu&op='+VIEWTKB[selection[0].row+1],'_blank')
+    });
+
+    chart.draw(data, options);
+  }
+</script>
+</body></html>

@@ -1,0 +1,45 @@
+.campaignPage .contentWrapper {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 24px; PADDING-RIGHT: 24px; PADDING-TOP: 0px
+}
+.campaignPage H1 {
+	PADDING-BOTTOM: 15px
+}
+.campaignPage H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.campaignPage H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.campaignPage H4 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.campaignPage H5 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bold; PADDING-TOP: 0px
+}
+.campaignPage P {
+	WIDTH: 100%; OVERFLOW: hidden
+}
+.campaignPage .hero {
+	PADDING-BOTTOM: 30px; MARGIN-BOTTOM: 0px
+}
+.campaignPage TABLE {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 100%; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.campaignPage TABLE TD {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 50%; VERTICAL-ALIGN: top; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.campaignPage TABLE TD {
+	PADDING-RIGHT: 12px
+}
+.campaignPage TABLE TD + TD {
+	PADDING-LEFT: 12px; PADDING-RIGHT: 0px
+}
+.campaignPage TABLE TD.col02 {
+	PADDING-LEFT: 12px; PADDING-RIGHT: 0px
+}
+.campaignPage .backToAzureSiteButtonWrapper {
+	HEIGHT: 75px
+}
+.campaignPage .backToAzureSiteButton {
+	MARGIN: 0px auto; WIDTH: 266px; DISPLAY: block; HEIGHT: 44px
+}

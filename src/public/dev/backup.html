@@ -1,0 +1,100 @@
+<html>
+	<script type="text/javascript" src="/ajaxpro/prototype.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/core.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/converter.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.Logout,EduSoft.Web.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.GioiThieu,EduSoft.Web.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.Footer,EduSoft.Web.ashx"></script>
+	<script type="text/javascript" src="/ajaxpro/EduSoft.Web.UC.DangKyMonHoc,EduSoft.Web.ashx"></script>
+	<script type="text/javascript">
+		function LoadDanhSachMonHoc(){
+			return new Promise((resolve,reject)=>{
+				EduSoft.Web.UC.DangKyMonHoc.LoadDanhSachKhoaLop((doituong)=>{
+					if (doituong.value && doituong.value.length > 8 && doituong.value.substring(0, 8) == "BCVTVTHN") {
+		                doituong = doituong.value.replace("BCVTVTHN", "");
+		                var maMh = [];
+		                doituong.match(/Value=\'(.*?)\'/g).map((e)=>{
+		                	maMh[maMh.length] = /Value=\'(.*?)\'/g.exec(e)[1];
+		                });
+		                resolve(maMh);
+		                
+		            }else{
+		            	reject('Khong Load duong danh sach khoa lop');
+		            }
+				})
+			})
+		}
+		function LoadDangKyMonHoc(){
+
+			return LoadDanhSachMonHoc().then((e)=>{
+				let i=0;result=[];
+				return new Promise((resolve,reject)=>{
+					e.map((item)=>{
+						EduSoft.Web.UC.DangKyMonHoc.LocTheoMonHoc(item, (doituongTDK)=>{
+							i++;
+							result[result.length] = doituongTDK.value;
+							if(i==e.length){
+								resolve(result);
+							}
+						});
+					})
+				})
+			})
+		}
+		/*LoadDangKyMonHoc().then((e)=>{
+			//console.log(JSON.stringify(e));
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "/dev/d.txt", false);
+			console.log(xhttp.responseText);
+		})*/
+		var test;
+
+		function getData(){
+			return new Promise((resolve,reject)=>{
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				  if (this.readyState == 4 && this.status == 200) {
+				    return resolve(JSON.parse(this.responseText));
+				  }
+				};
+				xhttp.open("GET", "/dev/d.txt", true);
+				xhttp.send();
+			})
+		}
+		convertBasic().then((e)=>{
+			debugger;
+		})
+
+		function convertBasic(){
+			return getData().then((e)=>{
+				var c = matchTagName(JSON.parse(e[0]).value.replace(/\r|\n/g,''),'table').map((e)=>{
+					var _t = matchTagName(e,'td',true);
+					for(var i=10;i<_t.length;i++){
+						_t[i] = matchTagName(_t[i],'div',true);
+					}
+					_t[_t.length-1] = matchTagName(_t[_t.length-1],'label',true);
+					_t[2] = _t[2].replace('&nbsp;','');
+					return _t;
+				});
+				return Promise.resolve(c);
+			})
+		}
+
+		function matchTagName(input,tag,c=false){
+			var result=[];
+			var regex = new RegExp(`<${tag} [^>]+>(.*?)<\/${tag}>`,'g');
+			while (match = regex.exec(input)) {
+			    if(c){
+			    	if(match[1]!='&nbsp;')
+			    		result[result.length] = match[1];
+			    }else{
+			    	result[result.length] = match[0];
+			    }
+			}
+			return result;
+		}
+
+
+	</script>
+	<div id='ttt'></div>
+</html>
