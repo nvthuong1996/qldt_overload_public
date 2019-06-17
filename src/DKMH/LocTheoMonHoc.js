@@ -31,7 +31,7 @@ module.exports = (req,res,next)=>{
 
         connect.query(`REPLACE  \`lichdk\` SET \`dkLoc\`=${connect.escape(dkLoc)},\`value\`=${connect.escape(body)}`,(error)=>{
           if(error){
-              throw new Error(dkLoc);
+              //throw new Error(dkLoc);
           }
         });
         
