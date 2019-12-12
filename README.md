@@ -7,6 +7,5 @@
 2. Sử dụng docker-compose.
   - App có thể chạy bằng docker-compose với một dòng lệnh
   - Setup docker-compose và sử dụng lệnh: docker-compose up
-  - Có vẻ như do viện map data mà lần đầu tiên chạy kiểu gì cũng lỗi. Nên phải run lại cái nữa. docker-compose up
   
 # Bạn nên deploy app ở server Việt Nam để đảm bảo app có thể hoạt động tốt. Các server quốc tế đang bị lỗi timeout khi request đến qldt

@@ -1,31 +1,38 @@
-  version: '3.3'
+  version: '2.1'
   services:
     node:
       build: ./
       restart: always
       ports:
-        - "80:5001"
+        - "5000:5001"
       depends_on:
-        - db
+        db:
+          condition: service_healthy
       networks:
         - docker_xxx
       environment:
         - DATABASE_HOST=db
     db:
-      image: mysql:5
+      image: mysql:5.7
+      restart: always
       volumes:
         - ./db_data:/var/lib/mysql
-        - ./initmysql.sql:/data/application/init.sql
-      command: --init-file /data/application/init.sql
+        - ./docker-entrypoint-initdb:/docker-entrypoint-initdb.d
       expose:
         - 3306
+      ports:
+        - "4000:3306"
       environment:
-       - MYSQL_ROOT_PASSWORD='root'
-       - MYSQL_DATABASE='qldtoverload'
-       - MYSQL_USER='test'
-       - MYSQL_PASSWORD='test'
+       - MYSQL_ROOT_PASSWORD=root
+       - MYSQL_DATABASE=qldtoverload
+       - MYSQL_USER=test
+       - MYSQL_PASSWORD=test
       networks:
         - docker_xxx
+      healthcheck:
+        test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+        timeout: 20s
+        retries: 5
   networks:
     docker_xxx:
       driver: bridge
