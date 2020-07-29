@@ -26,7 +26,7 @@ module.exports = (req, res, next) => {
     res
       .status(200)
       .send(
-        `{"value":"0|${maDK}|1|||0|${checkTKB.state.error}|||0||0|MSMH|3|Tên Môn Học|01|3.0|0|0|0|0|0|1|0||01/01/0001|0|0|1||1|1|1|1|0|0|1|"}`
+        `{"value":"0|${maDK}|1|||0|${checkTKB.state.error}|||0||0|MSMH|3|Tên Môn Học|01|3.0|0|0|0|0|0|1|0||01/01/0001|0|0|1||1|1|1|1|0|0|1||||||"}`
       );
   } else {
     AppData.SESSION[session].DKMH = lichmoi;
@@ -34,15 +34,13 @@ module.exports = (req, res, next) => {
       return res
         .status(200)
         .send(
-          `{"value":"1|${maDK}|1||${
-            checkTKB.oldMDK
-          }|0||||0||0|MSMH|3|Tên Môn Học|01|3.0|0|0|0|0|0|1|0||01/01/0001|0|0|1||1|1|1|1|0|0|1|"}`
+          `{"value":"1|${maDK}|1||${checkTKB.oldMDK}|0||||0||0|MSMH|3|Tên Môn Học|01|3.0|0|0|0|0|0|1|0||01/01/0001|0|0|1||1|1|1|1|0|0|1||||||"}`
         );
     } else {
       return res
         .status(200)
         .send(
-          `{"value":"0|${maDK}|1|||0||||0||0|MSMH|3|Tên Môn Học|01|3.0|0|0|0|0|0|1|0||01/01/0001|0|0|1||1|1|1|1|0|0|1|"}`
+          `{"value":"0|${maDK}|1|||0||||0||0|MSMH|3|Tên Môn Học|01|3.0|0|0|0|0|0|1|0||01/01/0001|0|0|1||1|1|1|1|0|0|1|||||"}`
         );
     }
   }
